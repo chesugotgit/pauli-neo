@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        comfortaa: ['Comfortaa', 'sans-serif'],
+        comfortaa: ['Comfortaa'],
         inter: ['Inter', 'sans-serif'],
-        'source-code': ['"Source Code Pro"', 'monospace'],
+        'source-code': ['Source Code Pro', 'monospace'],
       },
       colors: {
         bgPrimary: "#B5D1BF", // Primary Background Color
