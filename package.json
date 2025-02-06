@@ -1,6 +1,6 @@
 {
   "name": "pauli-neo",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "This is a development repository, you shouldn't be able to read this. This repository serves as the basis for monitoring updates over time.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "build": "npx tailwindcss -i ./src/input.css -o ./public/output.css --minify"
   },
   "keywords": [],
-  "author": "",
+  "author": "chesugotgit",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
