@@ -1,7 +1,7 @@
 {
   "name": "pauli-neo",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "This is a development repository, you shouldn't be able to read this. This repository serves as the basis for monitoring updates over time.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
