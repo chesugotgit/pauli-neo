@@ -30,8 +30,19 @@ module.exports = {
         slate: "#2D2D2D", // Lighter gray for sections
         steel: "#5E807F", // Cool-toned highlight
         charcoal: "#1B1B1B", // Deep shadow tone
+      },
+      scale: {
+        '101': '1.01',
+        '102': '1.02',
+        '103': '1.03',
+        '104': '1.04'
       }
     },
+    animation: {
+      'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      'pulse-medium': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+    }
   },
   plugins: [],
 };
