@@ -22,3 +22,13 @@
     font-weight: 100 900;
     font-display: swap;
 }
+
+@layer utilities {
+    .hover-lift {
+        @apply transition-transform duration-300 ease-in-out;
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-2px);
+    }
+}
