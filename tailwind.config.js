@@ -14,7 +14,7 @@ module.exports = {
       colors: {
         bgPrimary: "#B5D1BF", // Primary Background Color
         bgSecondary: "#005A48", // Secondary Background Color
-        hoverPrimary: "#A8D5BA", // Primary Hover Color
+        hoverPrimary: "#B9EDCE", // Primary Hover Color
         offwhite: "#F2F2F2", // Off White
         softsage: "#A0BFA7", // Soft Sage
         deepemerald: "#004D40", // Deep Emerald
