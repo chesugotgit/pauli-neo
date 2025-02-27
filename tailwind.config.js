@@ -12,6 +12,22 @@ module.exports = {
         'source-code': ['Source Code Pro', 'monospace'],
       },
       colors: {
+        // Trying a Color Pallete
+        // Generic Pallette
+        bgGeneric: "#b5d1bf",
+        bgGeneric2: "#92b5ab",
+        bgGeneric3: "#739997",
+        bgGeneric4: "#587d83",
+        bgGeneric5: "#42626e",
+        bgGeneric6: "#2f4858",
+        // Matching Gradient
+        bgMatching1: "#b5d1bf",
+        bgMatching2: "#93bcad",
+        bgMatching3: "#71a89f", 
+        bgMatching4: "#4d9393",
+        bgMatching5: "#217e88",
+        bgMatching6: "#00697f",
+        // End of Color Pallete
         bgPrimary: "#B5D1BF", // Primary Background Color
         bgSecondary: "#005A48", // Secondary Background Color
         hoverPrimary: "#B9EDCE", // Primary Hover Color
@@ -21,6 +37,8 @@ module.exports = {
         tealgreen: "#007566", // Teal Green
         mintgreen: "#A8D5BA", // Mint Green
         paleteal: "#8FC1A9", // Pale Teal
+        frostedmint: "#D6F0EF",
+        lightteal: "#A8D8D7", // Light Teal
         goldenrod: "#FFC107", // Goldenrod
         ivory: "#F8F1E5", // Soft Ivory
         forest: "#00695C", // Forest Green

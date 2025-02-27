@@ -5,7 +5,64 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
-## [1.0.2] - NA-NA-2025
+## [1.0.3] - 27-02-2025
+### ✨ Added
+- **Welcome Banner**
+  - Added a welcome banner to greet users.
+- **More Color Palletes**
+  - Added more color palletes generated using `mycolor.space`.
+    - 2 New Palletes: Matching and Gradient.
+    - Hopefully make the design more appealing and uniform.
+
+### 🔄 Changed
+- **Navigation Bar**
+  - Removed rounding.
+  - Modify to take up screen width.
+  - Centered section buttons.
+  - Adjusted spacing between buttons.
+- **Categories**
+  - Compressed certain features to reduce noise.
+    - **Main Category**.
+      - `Student's Hub`.
+      - `Teacher's Hub`.
+      - `General Hub`.
+    - Extras Category.
+      - `Entertainment`.
+      - `Knowledge Base`.
+    - Health Wiki
+      - `Mental Health`.
+      - `Stress Management`.
+      - `Physical Health`.
+    - **Project Details**.
+      - `Project Repository`.
+      - `Project Information`.
+      - `Credits`.
+
+### 🛠️ Fixed
+- No changes.
+
+### 🚀 Performance
+- No changes.
+
+### 📄 Documentation
+- Changes to README.md.
+  - Fixed and improved on the steps for modifying the project for personal use.
+
+### ⚠️ Deprecated
+- No changes.
+
+### ⛔ Removed
+- No changes.
+
+### 🔧 Miscellaneous
+- Bump version to `v1.0.3`
+- **Developer Notes**
+  - I'll start implementing the pages soon so that I can finalize the theme and colors.
+  - The plan to add `Vite.js` is postponed as I don't think I'll need it currently.
+
+---
+
+## [1.0.2] - 21-02-2025
 ### ✨ Added
 - **Student Page**
   - Testing of initial implementations of features.
