@@ -7,120 +7,95 @@
     <link rel="stylesheet" href="../public/output.css" />
   </head>
 
-  <body class="bg-bgPrimary font-comfortaa">
+  <body class="bg-bgMatching1 font-comfortaa">
+
     <!-- Navigation Bar -->
-    <nav
-      class="mx-auto mt-4 flex w-[95%] flex-col justify-center rounded-[20px] bg-bgSecondary overflow-hidden p-4 text-center text-white drop-shadow-md sm:flex-row">
-      <h2 class="ml-20 w-full text-left text-3xl font-bold">PAULI-NEO</h2>
-      <div class="flex w-full flex-col items-center justify-center">
-        <p class="animate-pulse-slow text-lg">The new version of PAULI AID.</p>
-      </div>
-      <div class="flex w-full flex-col items-center justify-end gap-4 px-6 sm:flex-row sm:gap-0">
-        <a
-          href="#"
-          class="mx-4 p-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30 rounded-lg px-3 py-1">
+    <nav class="flex w-full items-center justify-between bg-bgMatching3 p-4 text-white drop-shadow-md">
+      <!-- Logo (Left) -->
+      <h2 class="ml-16 text-3xl font-bold">PAULI-Neo</h2>
+    
+      <!-- Centered Navigation Links -->
+      <div class="absolute left-1/2 flex -translate-x-1/2 gap-6">
+        <a href="#" class="px-3 py-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30">
           Home
         </a>
-        <a
-          href="#"
-          class="mx-4 p-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30 rounded-lg px-3 py-1">
+        <a href="#" class="px-3 py-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30">
           Tools
         </a>
-        <a
-          href="#"
-          class="mx-4 p-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30 rounded-lg px-3 py-1">
+        <a href="#" class="px-3 py-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30">
           Resources
         </a>
-        <a
-          href="#"
-          class="mx-4 p-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30 rounded-lg px-3 py-1">
+        <a href="#" class="px-3 py-1 text-xl no-underline transition-transform hover:scale-105 hover:text-hoverPrimary hover:opacity-30">
           Others
         </a>
       </div>
     </nav>
 
-    <!-- Banner Image -->
-    <img
-      src=""
-      alt="Banner Image"
-      class="mx-auto mt-8 max-h-[500px] w-[95%] rounded-xl object-cover shadow-md sm:max-h-[400px] md:max-h-[350px]" />
-
-    <!-- Motto -->
-    <div class="mt-8 text-center text-xl">
-      <p class="hover-lift text-graphite">
-        All your stressors,
-        <span class="font-bold">gone</span>
-        .
-      </p>
-      <p class="hover-lift mt-4 text-graphite">All in one place.</p>
+    <!-- Hero Section -->
+    <div class="w-screen bg-bgMatching4 py-4 drop-shadow-md">
+      <div class="container mx-auto rounded-xl border-b-2 border-t-2 border-bgMatching5 p-6 text-center drop-shadow-md">
+        <div class="hover-lift">
+          <h3 class="mb-4 text-4xl font-bold text-white">
+            Welcome to PAULI-<spam class="text-gold">Neo</spam>!
+          </h3>
+          <p class="text-off-white mb-1 text-xl text-offwhite">
+            The mental health and stress management tool.
+          </p>
+          <p class="text-off-white mb-1 text-xl text-offwhite">
+            Made for <span class="font-bold text-gold">you</span> with <span class="font-bold text-red-600">love.</span>
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Main Content -->
     <!-- Container -->
     <div
-      class="container mx-auto mt-8 max-w-[95%] rounded-xl bg-bgSecondary p-2 drop-shadow-md transition-transform hover:scale-101">
-      <h2 class="mb-4 mt-2 text-center text-2xl font-bold text-white">Let's get started!</h2>
+      class="container mx-auto mt-8 max-w-[95%] rounded-xl border-b-2 border-t-2 border-bgMatching4 p-4 text-center drop-shadow-md">
+      <h2 class="mb-4 mt-1 stroke-black stroke-1 text-center text-2xl font-bold text-white">Try these out first!</h2>
 
       <!-- Grid -->
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <!--- Grid Item -->
-        <div class="rounded-lg bg-paleteal p-4 text-white shadow">
-          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">For Students</h2>
+        <div class="rounded-lg bg-bgMatching2 p-4 text-white shadow transition-transform hover:scale-101 hover:shadow-lg">
+          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Categories</h2>
           <div class="rounded-lg bg-white p-4 text-black shadow-md">
-            <h3 class="text-medium-gray hover-lift mb-2 text-center text-lg font-bold">
-              Resources that are useful for students to enhance their learning journey.
+            <h3 class="hover-lift mb-2 text-center text-lg font-bold text-mediumgray">
+              All of categories, made for you.
             </h3>
-            <div class="text-off-white mt-4 grid grid-cols-1 gap-3">
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">Mental Health</button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">
-                Emotional Health
-              </button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">
-                Reflection and Creativity
-              </button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">And more!</button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">
-                Self-care and Personal Growth
-              </button>
+            <div class="text-off-white mb-4 mt-4 grid grid-cols-1 gap-3">
+              <a href="categories/students.html" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Student's Hub</a>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Teacher's Hub</a>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">General Hub</a>
             </div>
           </div>
         </div>
 
         <!--- Grid Item -->
-        <div class="rounded-lg bg-paleteal p-4 text-white shadow">
-          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">For Teachers</h2>
+        <div class="rounded-lg bg-bgMatching2 p-4 text-white shadow transition-transform hover:scale-101 hover:shadow-lg">
+          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Extras and More</h2>
           <div class="rounded-lg bg-white p-4 text-black shadow-md">
-            <h3 class="text-medium-gray hover-lift mb-2 text-center text-lg font-bold">
-              Resources that are useful for teachers to improve their teaching efficiency and effectivity.
+            <h3 class="hover-lift mb-2 text-center text-lg font-bold text-mediumgray">
+              Need more? Try visiting our extra options!
             </h3>
             <div class="text-off-white mb-4 mt-4 grid grid-cols-1 gap-4">
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">Mental Health</button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">
-                Professional Development
-              </button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">
-                Classroom Management
-              </button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">
-                Stress Management
-              </button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">
-                Time and Task Management
-              </button>
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">And more!</button>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Entertainment</a>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Knowledge Base</a>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Placeholder</a>
             </div>
           </div>
         </div>
 
         <!--- Grid Item -->
-        <div class="rounded-lg bg-paleteal p-4 text-white shadow">
-          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">For Everyone</h2>
+        <div class="rounded-lg bg-bgMatching2 p-4 text-white shadow transition-transform hover:scale-101 hover:shadow-lg">
+          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Health Wiki</h2>
           <div class="rounded-lg bg-white p-4 text-black shadow-md">
-            <h3 class="text-medium-gray hover-lift mb-2 text-center text-lg font-bold">
-              General Resources that are useful to anyone from any walks of life.
+            <h3 class="hover-lift mb-2 text-center text-lg font-bold text-mediumgray">
+              A curated and detailed wiki so you can stay in the green.
             </h3>
             <div class="text-off-white mb-4 mt-4 grid grid-cols-1 gap-4">
-              <button class="rounded-lg bg-gold py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">Mental Health</button>
+              <button class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Mental Health</button>
+              <button class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Stress</button>
             </div>
           </div>
         </div>
@@ -132,44 +107,56 @@
     <!-- Second Main Content -->
     <!-- Container -->
     <div
-      class="container mx-auto mt-8 max-w-[95%] rounded-xl bg-bgSecondary p-2 drop-shadow-md transition-transform hover:scale-101">
-      <h2 class="mb-4 mt-2 text-center text-2xl font-bold text-white">Extra Resources</h2>
+      class="container mx-auto mt-8 max-w-[95%] rounded-xl border-b-2 border-t-2 border-bgMatching4 p-4 text-center drop-shadow-md">
+      <h2 class="mb-4 mt-1 text-center text-2xl font-bold text-white">Project Details</h2>
 
       <!-- Grid -->
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <!--- Grid Item -->
-        <div class="rounded-lg bg-paleteal p-4 text-white shadow">
+        <div class="rounded-lg bg-bgMatching2 p-4 text-white shadow transition-transform hover:scale-101 hover:shadow-lg">
           <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Project Repository</h2>
           <div class="rounded-lg bg-white p-4 text-black shadow-md">
-            <p class="text-center text-mediumgray">Want to take a deeper look into the source code?</p>
-            <p class="text-center text-mediumgray">Check it out!</p>
-            <div class="mt-4 grid grid-cols-1 gap-4">
-              <button class="rounded-lg bg-gray-700 py-2 px-4 text-lg font-medium transition-transform hover:scale-105 hover:shadow-lg">GitHub Repository</button>
+            <h3 class="hover-lift mb-2 text-center text-lg font-bold text-mediumgray">
+              View the project's source code.
+            </h3>
+            <div class="text-off-white mb-4 mt-4 grid grid-cols-1 gap-4">
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Repository</a>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Project Wiki</a>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Updates and Changes</a>
+              <a href="" class="rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg">Suggestions</a>
             </div>
           </div>
         </div>
 
         <!--- Grid Item -->
-        <div class="rounded-lg bg-paleteal p-4 text-white shadow">
-          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Updates and Changes</h2>
+        <div class="rounded-lg bg-bgMatching2 p-4 text-white shadow transition-transform hover:scale-101 hover:shadow-lg">
+          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Information</h2>
           <div class="rounded-lg bg-white p-4 text-black shadow-md">
-            <h3 class="text-medium-gray mb-2 text-center text-lg font-bold">What's cooking?</h3>
-            <div class="mb-4 mt-4 grid grid-cols-1 gap-4">
-              <button class="rounded-xl bg-gray-300 p-3 font-semibold text-black">Test1</button>
-            </div>
+            <h3 class="hover-lift mb-2 text-center text-lg font-bold text-mediumgray">
+              What is this about?
+            </h3>
+            <h2 class="text-gold">
+              Project Description
+            </h2>
+            <h2 class="text-gold">
+              Mission and Vision
+            </h2>
           </div>
         </div>
 
         <!--- Grid Item -->
-        <div class="rounded-lg bg-paleteal p-4 text-white shadow">
-          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Contact Us</h2>
+        <div class="rounded-lg bg-bgMatching2 p-4 text-white shadow transition-transform hover:scale-101 hover:shadow-lg">
+          <h2 class="text-deep-emerald mb-4 text-center text-2xl font-bold">Credits</h2>
           <div class="rounded-lg bg-white p-4 text-black shadow-md">
-            <h3 class="text-mediumgray mb-2 text-center text-xl font-bold">Wanna talk?</h3>
-            <h3 class="text-mediumgray mb-2 text-center text-lg font-bold">Main Developer</h3>
-            <p class="text-center">This is a third nested container for demonstration.</p>
+            <h3 class="hover-lift mb-2 text-center text-lg font-bold text-mediumgray">
+              Meet the talent!
+            </h3>
+            <h2 class="text-gold">
+              Main Developer
+            </h2>
           </div>
         </div>
-      </div>
+
     </div>
   </body>
 </html>
