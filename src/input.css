@@ -2,25 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'Inter';
-    src: url('./fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    src: local('Inter'),
+         url('./assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
     font-weight: 100 900;
     font-display: swap;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @font-face {
     font-family: 'Comfortaa';
-    src: url('./fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
+    src: local('Comfortaa'),
+         url('./assets/fonts/Comfortaa-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-display: swap;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@100..900&display=swap');
+
 @font-face {
     font-family: 'Source Code Pro';
-    src: url('./fonts/SourceCodePro-VariableFont_wght.ttf') format('truetype');
+    src: local('Source Code Pro'),
+         url('./assets/fonts/SourceCodePro-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@100..900&display=swap');
+
+@layer components {
+    .btn {
+        @apply min-w-[80%] rounded-lg bg-gold px-4 py-2 text-lg font-bold transition-transform hover:scale-105 hover:shadow-lg
+    }
 }
 
 @layer utilities {
