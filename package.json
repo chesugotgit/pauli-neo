@@ -1,7 +1,7 @@
 {
   "name": "pauli-neo",
-  "version": "1.0.3",
-  "description": "This is a development repository, you shouldn't be able to read this. This repository serves as the basis for monitoring updates over time.",
+  "version": "1.0.4",
+  "description": "Development repository for the new version of PAULI-AID.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,11 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
-    "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0",
     "postcss": "^8.5.1",
     "postcss-cli": "^11.0.0",
-    "semantic-release": "^24.2.1",
     "tailwindcss": "^3.4.17"
   },
   "config": {

@@ -5,6 +5,47 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
 and this project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.0.4] - 04-03-2025
+### ✨ Added
+- **Scripting Framework: Alpine.js**
+  - Added `Alpine.js` to the project.
+- **Pages**
+  - Added basic implementation of the other pages.
+
+### 🔄 Changed
+- **Organized Files**
+  - Placed several files into their own specific folders.
+    - `assets` for website specific assets.
+    - `scripts` for storing website function scripts.
+    - `hubs` for storing the different hubs.
+    - `account` for account section specifically.
+
+### 🛠️ Fixed
+- No changes.
+
+### 🚀 Performance
+- No changes.
+
+### 📄 Documentation
+- No changes.
+
+### ⚠️ Deprecated
+- No changes.
+
+### ⛔ Removed
+- **Removed Dependencies**
+  - removed `Commitizen`.
+  - removed `Conventional Changelog`.
+  - removed `Semantic Release`.
+
+### 🔧 Miscellaneous
+- Bump version to `v1.0.4`.
+- **Developer Notes**
+  - I removed the dependencies because I don't use them. I do changelogs and version bumping myself, thus I don't need automation.
+  - I added `Alpine.js` for testing.
+
+---
+
 ## [1.0.3] - 27-02-2025
 ### ✨ Added
 - **Welcome Banner**
