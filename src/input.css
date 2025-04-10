@@ -1,13 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-    --color-bgMatching1: "#b5d1bf";
-    --color-bgMatching2: "#93bcad";
-    --color-bgMatching3: "#71a89f"; 
-    --color-bgMatching4: "#4d9393";
-    --color-bgMatching5: "#217e88";
-    --color-bgMatching6: "#00697f";
-
     --animate-flicker: flicker 4s infinite alternate ease-in-out;
 
     --animate-glitch: glitch 0.5s infinite linear alternate;
@@ -61,4 +54,10 @@
 
 .index-box {
     @apply flex items-center justify-center text-4xl font-bold
+}
+
+@layer base {
+    body {
+        @apply transition-colors duration-500
+    }
 }
