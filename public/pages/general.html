@@ -1,54 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>General Resources</title>
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../output.css" />
     <script src="../scripts/transition-fade-out.js" defer></script>
-</head>
-<body class="bg-gray-900 text-gray-200">
-
-    <header class="p-6 text-center">
-        <h1 class="text-3xl md:text-4xl font-bold text-green-400 mb-2">General Resources</h1>
-        <p class="text-base md:text-lg text-gray-400">Helpful tools and information for everyone.</p>
-        <a href="../index.html" class="text-green-500 hover:text-green-400 inline-block mt-4">&larr; Back to Home</a>
-   </header>
+    <script src="../scripts/modal-handler.js" defer></script>
+    <script src="../scripts/page-redirect-handler.js" defer></script>
+    <script src="../scripts/panel-handler.js" defer></script>
+    <script src="../scripts/apply-settings.js" defer></script>
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    <header class="p-6 text-center relative">
+      <h1 class="text-3xl md:text-4xl font-bold text-green-400 mb-2">General Resources</h1>
+      <p class="text-base md:text-lg text-gray-400">Helpful tools and information for everyone.</p>
+      <!-- Container for links -->
+      <div class="mt-4 flex justify-center items-center space-x-4">
+        <!-- Link back to the Home Page -->
+        <a
+          href="../index.html"
+          data-page-target="../index.html"
+          class="text-green-500 hover:text-green-400 inline-block">
+          &larr; Back to Home
+        </a>
+        <!-- Settings Link -->
+        <a
+          href="settings.html"
+          class="text-green-500 hover:text-green-400 transition-colors duration-200"
+          aria-label="Settings">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+          </svg>
+        </a>
+      </div>
+    </header>
 
     <!-- Main Content Area -->
     <main class="p-6 md:p-8">
-        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <!-- Card 1 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            News & Announcements
+          </h3>
+          <p class="text-sm text-gray-400">A feed for general campus news, important updates, or upcoming events.</p>
+        </a>
 
-            <!-- Card 1 -->
-            <a href="#" class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
-                <!-- Icon -->
-                <div class="mb-4">
-                    <svg class="h-10 w-10 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" /> </svg>
-                </div>
-                <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
-                    Campus Map
-                </h3>
-                <p class="text-sm text-gray-400">
-                    Find your way around campus with our interactive map.
-                </p>
-            </a>
+        <!-- Card 2 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 0 0 2.25-2.25V6a2.25 2.25 0 0 0-2.25-2.25H6A2.25 2.25 0 0 0 3.75 6v2.25A2.25 2.25 0 0 0 6 10.5Zm0 9.75h2.25A2.25 2.25 0 0 0 10.5 18v-2.25a2.25 2.25 0 0 0-2.25-2.25H6a2.25 2.25 0 0 0-2.25 2.25V18A2.25 2.25 0 0 0 6 20.25Zm9.75-9.75H18a2.25 2.25 0 0 0 2.25-2.25V6A2.25 2.25 0 0 0 18 3.75h-2.25A2.25 2.25 0 0 0 13.5 6v2.25a2.25 2.25 0 0 0 2.25 2.25Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Campus Map
+          </h3>
+          <p class="text-sm text-gray-400">Find your way around campus with our interactive map.</p>
+        </a>
 
-            <!-- Card 2 -->
-            <a href="#" class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
-                 <!-- Icon -->
-                 <div class="mb-4">
-                    <svg class="h-10 w-10 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /> </svg>
-                </div>
-                <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
-                    Opening Hours
-                </h3>
-                <p class="text-sm text-gray-400">
-                    Check the operating hours for various campus facilities.
-                </p>
-            </a>
+        <!-- Card 3 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Opening Hours
+          </h3>
+          <p class="text-sm text-gray-400">Check the operating hours for various campus facilities.</p>
+        </a>
 
-        </div>
+        <!-- Card 4 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Campus Events Calendar
+          </h3>
+          <p class="text-sm text-gray-400">
+            A calendar highlighting public lectures, workshops, holidays, social events, etc.
+          </p>
+        </a>
+
+        <!-- Card 5 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Campus Directory
+          </h3>
+          <p class="text-sm text-gray-400">
+            A searchable directory for finding departments, faculty, or staff contact information.
+          </p>
+        </a>
+
+        <!-- Card 6-->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Feedback/Suggestion Box
+          </h3>
+          <p class="text-sm text-gray-400">
+            A simple form for users to submit general feedback, suggestions, or report issues.
+          </p>
+        </a>
+
+        <!-- Card 7-->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Lost & Found
+          </h3>
+          <p class="text-sm text-gray-400">
+            A digital bulletin board to report lost items or check for found items on campus.
+          </p>
+        </a>
+
+        <!-- Card 8-->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Emergency Information
+          </h3>
+          <p class="text-sm text-gray-400">
+            Quick access to campus safety procedures, emergency contact numbers, and alerts.
+          </p>
+        </a>
+
+        <!-- Card 9-->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V9.75M16.5 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.91 17.91 0 0 0-.01-1.417m-17.6 0h17.6" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 9.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h.375c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125h-3.75c-.621 0-1.125-.504-1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125h.375m-3.75 0H5.625c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125h3.75c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H9.75m0-3.75h.008v.008H9.75V6Zm3 0h.008v.008H12.75V6Zm3 0h.008v.008H15.75V6Zm-3 0h.008v.008H12.75V6Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Transportation & Parking
+          </h3>
+          <p class="text-sm text-gray-400">
+            Information about campus shuttle schedules, public transport options, parking rules, and lot availability.
+          </p>
+        </a>
+
+        <!-- Card 10-->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            Library Quick Link
+          </h3>
+          <p class="text-sm text-gray-400">
+            A direct link to the main library website, catalog search, or resource databases.
+          </p>
+        </a>
+
+        <!-- Card 11-->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-green-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.004.827c-.292.24-.437.613-.43.992a6.759 6.759 0 0 1 0 1.257c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.759 6.759 0 0 1 0-1.257c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-green-300 transition-colors group-hover:text-green-200">
+            IT Help/Support
+          </h3>
+          <p class="text-sm text-gray-400">
+            Information on how to contact the IT help desk or access tech support resources.
+          </p>
+        </a>
+      </div>
     </main>
-
-</body>
+  </body>
 </html>

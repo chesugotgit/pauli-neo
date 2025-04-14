@@ -44,20 +44,17 @@
     }
 }
 
-.card {
-    @apply rounded-lg bg-bgMatching2 p-4 text-white shadow transition-transform hover:scale-101 hover:shadow-lg
-}
-
-.card-container {
-    @apply container mx-auto mt-8 min-w-[70%] max-w-[75%] rounded-xl border-b-2 border-t-2 border-bgMatching4 p-4 text-center drop-shadow-md
-}
-
-.index-box {
-    @apply flex items-center justify-center text-4xl font-bold
-}
-
 @layer base {
     body {
         @apply transition-colors duration-500
     }
+}
+
+body {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+body.fade-out {
+    opacity: 0;
 }

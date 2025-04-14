@@ -5,6 +5,42 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## **[1.2.1] 04-14-2025**
+### [Added]
+- **Added Placeholder Functions to select Features**
+  - Modals
+    - Used for simpler, quick-action tools.
+  - Side Panel
+    - Tools that benefit from being accessible alongside main content.
+  - Page Redirect
+    - For more complex, feature-rich applications.
+- **[Experimental] Settings Page**
+  - Added a dynamic settings page for customizing the website globally.
+    - Not tested yet and is currently functionless.
+    - Automatically adds sections depending on data added to LocalStorage.
+- **[Experimental] User Account**
+  - Added a simple LocalStorage account system
+    - Saves data to the browser through LocalStorage.
+    - Not very safe, but works in this use case.
+
+### [Changes]
+- **Changed Page Redirect Transition Functionality**
+  - More dynamic and should work better.
+
+### [Deprecated]
+
+### [Removed]
+
+### [Fixed]
+
+### [Security]
+
+### [Extra Notes]
+- The foundation for adding functions is now placed. This will make it to add functions easier in the future.
+- This is also where the real trouble starts, currently these are placeholders. Actual functions will be added later.
+- Also, I'm pretty sure I'm considered a Vibe Coder now. Seriously, Use AI.
+- Yes, I'm also keeping the comments left by the AI I'm using.
+
 ## **[1.1.0] 04-10-2025**
 ### [Added]
 - Added Pages
