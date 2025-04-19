@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Default Settings Values ---
     const defaultSettings = {
         darkModeEnabled: true, // Default to dark mode
+        experimentsEnabled: false, // Default to experiments disabled
         userName: ''
         // Add other defaults here
     };
@@ -20,6 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
             darkModeToggle.checked = isDarkMode;
         }
 
+        // Experiments Toggle
+        const storedExperiments = localStorage.getItem('experimentsEnabled'); // Load experiments setting
+        const areExperimentsEnabled = storedExperiments !== null ? storedExperiments === 'true' : defaultSettings.experimentsEnabled;
+        if (experimentsToggle) { // Check if element exists
+          experimentsToggle.checked = areExperimentsEnabled;
+        }
+
         // User Name Input
         const storedUserName = localStorage.getItem('userName');
         if (userNameInput) { // Check if element exists
@@ -27,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
        
         // Load other settings into their respective form elements...
+        // Apply the visibility based on the loaded setting
+        applyExperimentalVisibility(areExperimentsEnabled);
     }
 
     // --- Save Setting Function ---
@@ -37,10 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // If changing dark mode, immediately apply it visually as well
         if (key === 'darkModeEnabled') {
             if (value) { // value will be boolean true/false from checkbox
-                 document.documentElement.classList.add('dark');
+                document.documentElement.classList.add('dark');
             } else {
-                 document.documentElement.classList.remove('dark');
+                document.documentElement.classList.remove('dark');
             }
+        }
+        // If changing experiments, immediately apply it visually as well
+        if (key === 'experimentsEnabled') {
+            applyExperimentalVisibility(value);
         }
     }
 
@@ -48,6 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (darkModeToggle) {
         darkModeToggle.addEventListener('change', (event) => {
             saveSetting('darkModeEnabled', event.target.checked);
+        });
+    }
+
+    if (experimentsToggle) {
+        experimentsToggle.addEventListener('change', (event) => {
+            saveSetting('experimentsEnabled', event.target.checked);
         });
     }
 
@@ -72,6 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     document.documentElement.classList.remove('dark');
                 }
+                if (experimentsToggle) experimentsToggle.checked = defaultSettings.experimentsEnabled;
                 if (userNameInput) userNameInput.value = defaultSettings.userName;
                 
                 // Remove specific setting keys from localStorage
@@ -81,10 +102,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 alert('Settings have been reset to defaults.');
+                // Re-apply the experimental features visibility
+                applyExperimentalVisibility(defaultSettings.experimentsEnabled);
+                applyInitialSettings(); // Re-apply global settings
             }
         });
     }
 
     // --- Initial Load ---
     loadSettingsIntoForm(); // Load settings into the form elements on this page
+
+        // Function to control visibility of experimental features based on toggle
+    function applyExperimentalVisibility(areExperimentsEnabled) {
+        const experimentalFeatures = document.querySelectorAll('.experimental-feature');
+        experimentalFeatures.forEach(feature => {
+            if (areExperimentsEnabled) {
+                feature.classList.remove('hidden');
+            } else {
+                feature.classList.add('hidden');
+            }
+        });
+    }
 });

@@ -6,34 +6,44 @@
     <title>Teacher Dashboard</title>
     <link rel="stylesheet" href="../output.css" />
     <script src="../scripts/transition-fade-out.js" defer></script>
-    <script src="../scripts/modal-handler.js" defer></script>
     <script src="../scripts/page-redirect-handler.js" defer></script>
-    <script src="../scripts/panel-handler.js" defer></script>
     <script src="../scripts/apply-settings.js" defer></script>
   </head>
   <body class="bg-gray-900 text-gray-200">
     <header class="p-6 text-center relative">
       <h1 class="text-3xl md:text-4xl font-bold text-amber-400 mb-2">Teacher Dashboard</h1>
       <p class="text-base md:text-lg text-gray-400">Resources and tools for educators.</p>
-       <!-- Container for links -->
+      <!-- Container for links -->
       <div class="mt-4 flex justify-center items-center space-x-4">
         <!-- Link back to the Home Page -->
-        <a href="../index.html" data-page-target="../index.html" class="text-amber-500 hover:text-amber-400 inline-block">&larr; Back to Home</a>
+        <a href="#" class="text-amber-500 hover:text-amber-400 inline-block back-link">&larr; Back</a>
         <!-- Settings Link -->
-        <a href="settings.html" 
-           class="text-amber-500 hover:text-amber-400 transition-colors duration-200" 
-           aria-label="Settings">
-           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
-          </svg>          
+        <a
+          href="settings.html"
+          class="text-amber-500 hover:text-amber-400 transition-colors duration-200"
+          aria-label="Settings">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5" />
+          </svg>
         </a>
       </div>
     </header>
-    
 
     <!-- Main Content Area -->
     <main class="p-6 md:p-8">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <!-- Category Separator -->
+        <h2 class="col-span-full text-2xl font-semibold text-amber-300 mt-10 mb-4">Planning and Preparation</h2>
+        <!-- End Category Separator -->
 
         <!-- Card 1 -->
         <!-- Page Redirect Example -->
@@ -61,6 +71,93 @@
           </h3>
           <p class="text-sm text-gray-400">Access shared lesson plans and curriculum resources.</p>
         </a>
+
+        <!-- Card 6 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-amber-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
+            Resource Library/Uploader
+          </h3>
+          <p class="text-sm text-gray-400">
+            A place to upload, organize, and share teaching materials like worksheets, presentations, videos, or useful
+            links.
+          </p>
+        </a>
+
+        <!-- Card 7 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-amber-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 6.75h12M8.25 12h12M8.25 17.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
+            Rubric Creator
+          </h3>
+          <p class="text-sm text-gray-400">
+            A helper tool to build and save standardized grading rubrics for various types of assignments.
+          </p>
+        </a>
+
+        <!-- Card 9 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-amber-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
+            Class Calendar/Scheduler
+          </h3>
+          <p class="text-sm text-gray-400">
+            A dedicated calendar for planning lessons, marking school events, setting assignment due dates, or
+            scheduling parent-teacher meetings.
+          </p>
+        </a>
+
+        <!-- Category Separator -->
+        <h2 class="col-span-full text-2xl font-semibold text-amber-300 mt-10 mb-4">Assessment and Tracking</h2>
+        <!-- End Category Separator -->
 
         <!-- Card 2 -->
         <a
@@ -142,6 +239,37 @@
           </p>
         </a>
 
+        <!-- Card 8 -->
+        <a
+          href="#"
+          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
+          <!-- Icon -->
+          <div class="mb-4">
+            <svg
+              class="h-10 w-10 text-amber-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m8.007 0a3 3 0 0 0-4.682-2.72M12 12.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0 0a9.094 9.094 0 0 0-3.741-.479 3 3 0 0 0-4.682 2.72M6.03 15.531A5.971 5.971 0 0 1 6 18.72m0-3.189a5.995 5.995 0 0 1 5.058-2.772 5.995 5.995 0 0 1 5.058 2.772m0 0a3 3 0 0 1 4.682 2.72m-8.007 0a3 3 0 0 1-4.682-2.72" />
+            </svg>
+          </div>
+          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
+            Attendance Log
+          </h3>
+          <p class="text-sm text-gray-400">
+            A straightforward tool for marking and managing daily or class-specific student attendance.
+          </p>
+        </a>
+
+        <!-- Category Separator -->
+        <h2 class="col-span-full text-2xl font-semibold text-amber-300 mt-10 mb-4">Communication</h2>
+        <!-- End Category Separator -->
+
         <!-- Card 5 -->
         <a
           href="#"
@@ -170,115 +298,9 @@
           </p>
         </a>
 
-        <!-- Card 6 -->
-        <a
-          href="#"
-          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
-          <!-- Icon -->
-          <div class="mb-4">
-            <svg
-              class="h-10 w-10 text-amber-500"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-          </div>
-          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
-            Resource Library/Uploader
-          </h3>
-          <p class="text-sm text-gray-400">
-            A place to upload, organize, and share teaching materials like worksheets, presentations, videos, or useful
-            links.
-          </p>
-        </a>
-
-        <!-- Card 7 -->
-        <a
-          href="#"
-          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
-          <!-- Icon -->
-          <div class="mb-4">
-            <svg
-              class="h-10 w-10 text-amber-500"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 6.75h12M8.25 12h12M8.25 17.25h12M3.75 6.75h.007v.008H3.75V6.75Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0ZM3.75 12h.007v.008H3.75V12Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm-.375 5.25h.007v.008H3.75v-.008Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
-            </svg>
-          </div>
-          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
-            Rubric Creator
-          </h3>
-          <p class="text-sm text-gray-400">
-            A helper tool to build and save standardized grading rubrics for various types of assignments.
-          </p>
-        </a>
-
-        <!-- Card 8 -->
-        <a
-          href="#"
-          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
-          <!-- Icon -->
-          <div class="mb-4">
-            <svg
-              class="h-10 w-10 text-amber-500"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m8.007 0a3 3 0 0 0-4.682-2.72M12 12.75a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm0 0a9.094 9.094 0 0 0-3.741-.479 3 3 0 0 0-4.682 2.72M6.03 15.531A5.971 5.971 0 0 1 6 18.72m0-3.189a5.995 5.995 0 0 1 5.058-2.772 5.995 5.995 0 0 1 5.058 2.772m0 0a3 3 0 0 1 4.682 2.72m-8.007 0a3 3 0 0 1-4.682-2.72" />
-            </svg>
-          </div>
-          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
-            Attendance Log
-          </h3>
-          <p class="text-sm text-gray-400">
-            A straightforward tool for marking and managing daily or class-specific student attendance.
-          </p>
-        </a>
-
-        <!-- Card 9 -->
-        <a
-          href="#"
-          class="group block rounded-xl border border-gray-700 bg-gray-800 p-6 shadow-lg transition-all duration-200 ease-in-out hover:scale-[1.03] hover:border-amber-600 hover:bg-gray-700">
-          <!-- Icon -->
-          <div class="mb-4">
-            <svg
-              class="h-10 w-10 text-amber-500"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
-            </svg>
-          </div>
-          <h3 class="mb-2 text-xl font-semibold text-amber-300 transition-colors group-hover:text-amber-200">
-            Class Calendar/Scheduler
-          </h3>
-          <p class="text-sm text-gray-400">
-            A dedicated calendar for planning lessons, marking school events, setting assignment due dates, or
-            scheduling parent-teacher meetings.
-          </p>
-        </a>
+        <!-- Category Separator -->
+        <h2 class="col-span-full text-2xl font-semibold text-amber-300 mt-10 mb-4">Professional Development</h2>
+        <!-- End Category Separator -->
 
         <!-- Card 10 -->
         <a

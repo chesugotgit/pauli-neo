@@ -1,79 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Settings</title>
-    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../output.css" />
     <script src="../scripts/transition-fade-out.js" defer></script>
     <script src="../scripts/modal-handler.js" defer></script>
     <script src="../scripts/page-redirect-handler.js" defer></script>
     <script src="../scripts/panel-handler.js" defer></script>
     <script src="../scripts/apply-settings.js" defer></script>
+    <script src="../scripts/settings.js" defer></script>
 
     <!-- Basic Global Style Toggle -->
     <!-- Does not actually do anything -->
-    <style>
-        .toggle-checkbox:checked + .toggle-label {
-            background-color: #8b5cf6;
-        }
-        .toggle-checkbox:checked + .toggle-label::after {
-            transform: translateX(100%);
-        }
-        .toggle-label::after {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 1.25rem;
-            height: 1.25rem;
-            background-color: white;
-            border-radius: 9999px;
-            transition: transform 0.2s ease-in-out;
-        }
-    </style>
-</head>
-<body class="bg-gray-900 text-gray-200">
+  </head>
+  <body class="bg-gray-900 text-gray-200">
     <header class="p-6 text-center">
-        <h1 class="text-3xl md:text-4xl font-bold text-purple-400 mb-2">Settings</h1>
-        <p class="text-base md:text-lg text-gray-400">Adjust application preferences.</p>
-        <!-- Link back to the Home Page -->
-        <a href="../index.html" data-page-target="../index.html" class="text-purple-500 hover:text-purple-400 inline-block mt-4">&larr; Back to Home</a>
+      <h1 class="text-3xl md:text-4xl font-bold text-purple-400 mb-2">Settings</h1>
+      <p class="text-base md:text-lg text-gray-400">Adjust application preferences.</p>
+      <!-- Link back to the Home Page -->
+      <a href="#" class="text-purple-500 hover:text-purple-400 inline-block mt-4 back-link">&larr; Back</a>
     </header>
 
     <!-- Main Content Area -->
     <main class="p-6 md:p-8 max-w-2xl mx-auto">
-        <div class="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700 space-y-6">
-            
-            <!-- Setting 1: Toggle Example-->
-            <div class="flex items-center justify-between p-4 bg-gray-700 rounded">
-                <label for="darkModeToggle" class="text-lg text-gray-300">Enable Dark Mode</label>
-                <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
-                    <input type="checkbox" name="darkModeToggle" id="darkModeToggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer opacity-0"/>
-                    <label for="darkModeToggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-600 cursor-pointer"></label>
-                </div>
-            </div>
-
-            <!-- Setting 2: Text Input Example -->
-            <div class="p-4 bg-gray-700 rounded">
-                <label for="userName" class="block text-lg text-gray-300 mb-2">User Name</label>
-                <input type="text" id="userName" name="userName" placeholder="Enter your preferred name"
-                       class="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded text-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent">
-            </div>
-
-            <!-- Other Settings here -->
-
-            <!-- Reset Button -->
-            <div class="pt-6 border-t border-gray-700">
-                 <button 
-                    id="resetSettingsButton" 
-                    class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
-                    Reset Settings to Defaults
-                </button>
-                 <p class="text-xs text-gray-500 mt-2">Resets only the settings on this page.</p>
-            </div>
-
+      <div class="bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-700 space-y-6">
+        <!-- Setting 1: Toggle Example-->
+        <div class="flex items-center justify-between p-4 bg-gray-700 rounded">
+          <label for="darkModeToggle" class="text-lg text-gray-300">Enable Dark Mode</label>
+          <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+            <input
+              type="checkbox"
+              name="darkModeToggle"
+              id="darkModeToggle"
+              class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer opacity-0" />
+            <label
+              for="darkModeToggle"
+              class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-600 cursor-pointer"></label>
+          </div>
         </div>
+
+        <div class="flex items-center justify-between p-4 bg-gray-700 rounded">
+          <label for="experimentsToggle" class="text-lg text-gray-300">Enable Experiments</label>
+          <p class="text-xs text-gray-500">
+            Experimental Features are colored in
+            <span class="text-red-500">Red.</span>
+          </p>
+          <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+            <input
+              type="checkbox"
+              name="experimentsToggle"
+              id="experimentsToggle"
+              class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer opacity-0" />
+            <label
+              for="experimentsToggle"
+              class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-600 cursor-pointer"></label>
+          </div>
+        </div>
+
+        <!-- Setting 2: Text Input Example -->
+        <div class="p-4 bg-gray-700 rounded">
+          <label for="userName" class="block text-lg text-gray-300 mb-2">User Name</label>
+          <input
+            type="text"
+            id="userName"
+            name="userName"
+            placeholder="Enter your preferred name"
+            class="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded text-gray-200 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" />
+        </div>
+
+        <!-- Other Settings here -->
+
+        <!-- Reset Button -->
+        <div class="pt-6 border-t border-gray-700">
+          <button
+            id="resetSettingsButton"
+            class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded transition duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50">
+            Reset Settings to Defaults
+          </button>
+          <p class="text-xs text-gray-500 mt-2">Resets only the settings on this page.</p>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

@@ -6,13 +6,17 @@
     <title>Landing Page</title>
     <link rel="stylesheet" href="./output.css" />
     <script src="./script.js"></script>
+    <script src="./scripts/transition-fade-out.js" defer></script>
+    <script src="./scripts/modal-handler.js" defer></script>
+    <script src="./scripts/page-redirect-handler.js" defer></script>
+    <script src="./scripts/panel-handler.js" defer></script>
+    <script src="./scripts/apply-settings.js" defer></script>
   </head>
 
   <body class="bg-gray-900 transition-colors duration-300 ease-in-out">
     <div class="absolute top-32 left-1/2 -translate-x-1/2">
       <h1 class="text-4xl font-bold text-white text-center glow-white">
-        Welcome to PAULI-
-        <span class="glow-blue animate-hue">Neo.</span>
+        Welcome to PAULI-<span class="glow-blue animate-hue">Neo.</span>
       </h1>
     </div>
 
@@ -20,14 +24,20 @@
       <h1 class="text-xl font-bold text-white text-center">The next generation of PAULI-AID.</h1>
     </div>
 
+    <div class="absolute top-62 left-1/2 -translate-x-1/2">
+      <h1 class="text-xl font-bold text-white text-center">Where would you like to go?</h1>
+    </div>
+
     <div class="w-screen h-screen flex items-center justify-center">
       <div class="grid grid-cols-3 gap-x-16">
         <!--Student Box-->
         <a
           href="./pages/student.html"
-          class="group relative flex flex-col items-center justify-center w-96 h-80 bg-blue-400 border-4 border-blue-600 rounded-3xl transition-all duration-300 hover:scale-105 index-box text-white text-center overflow-hidden p-6"
-          data-bg="rgba(96, 165, 250, 0.80)">
-          <span class="block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+          data-page-target="./pages/student.html"
+          class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
+          <div
+            class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-blue-400 bg-blue-600 border-4 border-blue-600 rounded-3xl"></div>
+          <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -43,12 +53,12 @@
           </span>
 
           <span
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
+            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
             Student
           </span>
 
           <span
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-lg transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
+            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
             Student Resources
           </span>
         </a>
@@ -56,9 +66,11 @@
         <!--General Box-->
         <a
           href="./pages/general.html"
-          class="group relative flex flex-col items-center justify-center w-96 h-80 bg-green-400 border-4 border-green-600 rounded-3xl transition-all duration-300 hover:scale-105 index-box text-white text-center overflow-hidden p-6"
-          data-bg="rgba(22, 163, 74, 0.50)">
-          <span class="block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+          data-page-target="./pages/general.html"
+          class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
+          <div
+            class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-green-400 bg-green-600 border-4 border-green-600 rounded-3xl"></div>
+          <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -74,12 +86,12 @@
           </span>
 
           <span
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
+            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
             General
           </span>
 
           <span
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-lg transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
+            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
             General Resources
           </span>
         </a>
@@ -87,9 +99,11 @@
         <!--Teacher Box-->
         <a
           href="./pages/teacher.html"
-          class="group relative flex flex-col items-center justify-center w-96 h-80 bg-yellow-400 border-4 border-yellow-600 rounded-3xl transition-all duration-300 hover:scale-105 index-box text-white text-center overflow-hidden p-6"
-          data-bg="rgba(202, 138, 4, 0.50)">
-          <span class="block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+          data-page-target="./pages/teacher.html"
+          class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
+          <div
+            class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-yellow-400 bg-yellow-600 border-4 border-yellow-600 rounded-3xl"></div>
+          <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -105,12 +119,12 @@
           </span>
 
           <span
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
+            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
             Teacher
           </span>
 
           <span
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-lg transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
+            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
             Teacher Resources
           </span>
         </a>

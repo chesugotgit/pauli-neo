@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## **[1.3.0] 04-19-2025**
+### [Added]
+- **Added Experiments Button**
+  - Toggle for showing experimental features.
+  - Experimental features are hidden when disabled, and shown when enabled.
+- **[Experimental] Mental Health Management Page**
+  - Added a specific page for features specifically for managing mental health.
+  - Currently experimental as all functions are placeholders, and existing functions are extremely unstable.
+
+### [Changes]
+- **Improved Back Function**
+  - Pages no longer need to redirect back to `index.html` every time.
+    - Stores current page and moves it to an index when changing pages.
+    - Back buttons now redirect to the last visited page instead of returning to `index.html`.
+    - Fallbacks to returning to `index.html` if the index is empty or doesn't exist.
+
+### [Deprecated]
+
+### [Removed]
+
+### [Fixed]
+- Fixed the issue where transitioning from any page back to `index.html` would break the fade animation.
+
+### [Security]
+
+### [Extra Notes]
+- Now all of the foundations for adding functions are laid.
+- I'm going to start adding functions soon, slowly and surely all of these cards will have a function tied to them.
+- Unfortunately, what exists on the pages now will be final. I do not plan on adding more.
+- Experimental features will be added when they are stable enough for usage.
+- Next update will be full release.
+
 ## **[1.2.1] 04-14-2025**
 ### [Added]
 - **Added Placeholder Functions to select Features**
