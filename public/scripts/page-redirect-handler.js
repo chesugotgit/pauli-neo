@@ -28,16 +28,16 @@ function navigateBack() {
       // If there is no previous page, redirect to index.html
       console.warn('No previous page in history. Redirecting to index.html.');
       if (typeof fadeOutAndNavigate === 'function') {
-          fadeOutAndNavigate('../index.html');
+          fadeOutAndNavigate('/index.html');
       } else {
-          window.location.href = '../index.html';
+          window.location.href = '/index.html';
       }
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   const pageRedirectTriggers = document.querySelectorAll('[data-page-target]');
-  const indexPage = '../index.html'
+  const indexPage = '/index.html'
   const currentPage = window.location.href;
 
   //Update index with current location
