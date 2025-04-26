@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="./output.css"/>
     <script src="./script.js"></script>
     <script src="./scripts/transition-fade-out.js" defer></script>
     <script src="./scripts/modal-handler.js" defer></script>
@@ -14,22 +14,18 @@
   </head>
 
   <body class="bg-gray-900 transition-colors duration-300 ease-in-out">
-    <div class="absolute top-32 left-1/2 -translate-x-1/2">
+    <div class="w-full h-screen flex flex-col items-center justify-center">
       <h1 class="text-4xl font-bold text-white text-center glow-white">
         Welcome to PAULI-<span class="glow-blue animate-hue">Neo.</span>
       </h1>
-    </div>
+      <h1 class="text-xl font-bold text-white text-center mt-4">
+        The next generation of PAULI-AID.
+      </h1>
+      <h1 class="text-xl font-bold text-white text-center mt-4">
+        Where would you like to go?
+      </h1>
 
-    <div class="absolute top-48 left-1/2 -translate-x-1/2">
-      <h1 class="text-xl font-bold text-white text-center">The next generation of PAULI-AID.</h1>
-    </div>
-
-    <div class="absolute top-62 left-1/2 -translate-x-1/2">
-      <h1 class="text-xl font-bold text-white text-center">Where would you like to go?</h1>
-    </div>
-
-    <div class="w-screen h-screen flex items-center justify-center">
-      <div class="grid grid-cols-3 gap-x-16">
+      <div class="grid grid-cols-3 gap-x-16 mt-24">
         <!--Student Box-->
         <a
           href="./pages/student.html"

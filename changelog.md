@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## **[1.4.0] 04-26-2025**
+### [Added]
+- **[Experimental] Mood Tracker Function**
+  - Uses the user's webcam and `face-api.js` to detect moods based on the user's face.
+  - Logs these moods to the browser's storage.
+- **Calculator Functions**
+  - Added functions to the calculator cards through the use of `math.js`.
+- **GPA Calculator Functions**
+  - Added functions to the GPA calculator through by adopting functions of `math.js`.
+
+### [Changes]
+- **Improved Landing Page**
+  - No longer uses absolute positioning.
+  - Still needs some fixing on smaller devices.
+- **Polished Lesson Plans Feature**
+  - Fleshed out the feature to include actual functions.
+- Changes to several JavaScript files to improve stability and to add more features.
+
+### [Deprecated]
+
+### [Removed]
+
+### [Fixed]
+
+### [Security]
+
+### [Extra Notes]
+- Many changes made were not carefully tracked due to time constraints.
+- ICIA Global Round 2025.
+
 ## **[1.3.0] 04-19-2025**
 ### [Added]
 - **Added Experiments Button**

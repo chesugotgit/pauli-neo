@@ -21,39 +21,39 @@ document.addEventListener('DOMContentLoaded', () => {
      */
     function openModal(modalElement) {
       if (!modalElement) return;
-  
+
       if (currentlyOpenModal) {
         closeModal(); // Close any existing modal first
       }
-  
+
       const backdrop = modalElement.querySelector('.modal-backdrop');
       const panel = modalElement.querySelector('.inline-block.align-bottom'); // Find the panel div
-  
+
       if (!panel || !backdrop) {
-          console.error("Modal structure incomplete: missing panel or backdrop.", modalElement);
-          return;
+        console.error("Modal structure incomplete: missing panel or backdrop.", modalElement);
+        return;
       }
-  
+
       modalElement.classList.remove('hidden'); // Make the container visible
       document.body.classList.add('overflow-hidden');
-  
+
       // --- Animation Start ---
       // Use requestAnimationFrame to ensure initial styles are applied before transitioning
       requestAnimationFrame(() => {
-          backdrop.classList.remove('opacity-0'); // Fade in backdrop
-          backdrop.classList.add('opacity-75'); // Target opacity for backdrop
-  
-          panel.classList.remove('opacity-0'); // Fade in panel
-          panel.classList.remove('scale-95'); // Scale up panel
-          panel.classList.add('opacity-100');
-          panel.classList.add('scale-100');
+        backdrop.classList.remove('opacity-0'); // Fade in backdrop
+        backdrop.classList.add('opacity-75'); // Target opacity for backdrop
+
+        panel.classList.remove('opacity-0'); // Fade in panel
+        panel.classList.remove('scale-95'); // Scale up panel
+        panel.classList.add('opacity-100');
+        panel.classList.add('scale-100');
       });
       // --- Animation End ---
-  
+
       currentlyOpenModal = modalElement;
       currentlyOpenModalPanel = panel;
       currentlyOpenModalBackdrop = backdrop;
-  
+
       // Focus management
       const focusableElements = modalElement.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 300); // Match CSS duration-300
     }
   
-    // --- Event Listeners (No changes needed here) ---
+    // --- Event Listeners ---
     modalTriggers.forEach(trigger => {
       trigger.addEventListener('click', (event) => {
         if (trigger.tagName === 'A' && trigger.getAttribute('href') === 'javascript:void(0);') {

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const userNameInput = document.getElementById('userName');
     const resetSettingsButton = document.getElementById('resetSettingsButton');
+    const currentUserIdInput = document.getElementById('currentUserId');
 
     // --- Default Settings Values ---
     const defaultSettings = {
@@ -32,8 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const storedUserName = localStorage.getItem('userName');
         if (userNameInput) { // Check if element exists
              userNameInput.value = storedUserName !== null ? storedUserName : defaultSettings.userName;
+             saveSetting('userId', userNameInput.value) // Save user name as userId
         }
-       
+
+        // Current User ID Display
+         const storedUserId = localStorage.getItem('userID');
+         if (currentUserIdInput) {
+             currentUserIdInput.value = storedUserId;
+         }
+
         // Load other settings into their respective form elements...
         // Apply the visibility based on the loaded setting
         applyExperimentalVisibility(areExperimentsEnabled);
@@ -55,6 +63,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // If changing experiments, immediately apply it visually as well
         if (key === 'experimentsEnabled') {
             applyExperimentalVisibility(value);
+        }
+        if (key === 'userName') { // Add user name as their ID
+            saveSetting('userID', value);
         }
     }
 
