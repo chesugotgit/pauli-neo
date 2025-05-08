@@ -1,114 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="./public/output.css"/>
-    <script src="./public/script.js"></script>
-    <script src="./public/scripts/transition-fade-out.js" defer></script>
-    <script src="./public/scripts/modal-handler.js" defer></script>
-    <script src="./public/scripts/page-redirect-handler.js" defer></script>
-    <script src="./public/scripts/panel-handler.js" defer></script>
-    <script src="./public/scripts/apply-settings.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="./public/output.css" />
+  <script src="./public/script.js"></script>
+  <script src="./public/scripts/transition-fade-out.js" defer></script>
+  <script src="./public/scripts/modal-handler.js" defer></script>
+  <script src="./public/scripts/page-redirect-handler.js" defer></script>
+  <script src="./public/scripts/panel-handler.js" defer></script>
+  <script src="./public/scripts/apply-settings.js" defer></script>
+  <style>
+    #robot-face-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      cursor: pointer;
+    }
 
-  <body class="bg-gray-900 transition-colors duration-300 ease-in-out">
-    <div class="w-full h-screen flex flex-col items-center justify-center">
-      <div class="flex flex-wrap justify-center gap-6 mt-12">
-        <!-- Student Box -->
-        <a
-          href="./public/pages/student.html"
-          data-page-target="./public/pages/student.html"
-          class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
-          <div
-            class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-blue-400 bg-blue-600 border-4 border-blue-600 rounded-3xl"></div>
-          <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-24 h-24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-            </svg>
-          </span>
-          <span
-            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
-            Student
-          </span>
-          <span
-            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
-            Student Resources
-          </span>
-        </a>
+    #robot-face {
+      width: 100%;  /* Make the image fill the container's width */
+      height: 100%; /* Make the image fill the container's height */
+    }
+  </style>
+</head>
 
-        <!-- General Box -->
-        <a
-          href="./public/pages/general.html"
-          data-page-target="./public/pages/general.html"
-          class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
-          <div
-            class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-green-400 bg-green-600 border-4 border-green-600 rounded-3xl"></div>
-          <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-24 h-24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
-          </span>
-          <span
-            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
-            General
-          </span>
-          <span
-            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
-            General Resources
-          </span>
-        </a>
+<body class="bg-gray-900 transition-colors duration-300 ease-in-out">
+  <div id="robot-face-container">
+    <img src="./public/assets/robot_face.gif" alt="Robot Face" id="robot-face">
+  </div>
+  <div class="w-full h-screen flex flex-col items-center justify-center">
+    <div class="flex flex-wrap justify-center gap-6 mt-12">
+      <!-- Student Box -->
+      <a href="./public/pages/student.html" data-page-target="./public/pages/student.html"
+        class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
+        <div
+          class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-blue-400 bg-blue-600 border-4 border-blue-600 rounded-3xl">
+        </div>
+        <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-24 h-24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+          </svg>
+        </span>
+        <span
+          class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
+          Student
+        </span>
+        <span
+          class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
+          Student Resources
+        </span>
+      </a>
 
-        <!-- Teacher Box -->
-        <a
-          href="./public/pages/teacher.html"
-          data-page-target="./public/pages/teacher.html"
-          class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
-          <div
-            class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-yellow-400 bg-yellow-600 border-4 border-yellow-600 rounded-3xl"></div>
-          <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-24 h-24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-            </svg>
-          </span>
-          <span
-            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
-            Teacher
-          </span>
-          <span
-            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
-            Teacher Resources
-          </span>
-        </a>
-      </div>
+      <!-- General Box -->
+      <a href="./public/pages/general.html" data-page-target="./public/pages/general.html"
+        class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
+        <div
+          class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-green-400 bg-green-600 border-4 border-green-600 rounded-3xl">
+        </div>
+        <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-24 h-24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+          </svg>
+        </span>
+        <span
+          class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
+          General
+        </span>
+        <span
+          class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
+          General Resources
+        </span>
+      </a>
+
+      <!-- Teacher Box -->
+      <a href="./public/pages/teacher.html" data-page-target="./public/pages/teacher.html"
+        class="group relative flex flex-col items-center justify-center w-96 h-80 rounded-3xl transition-all duration-300 hover:scale-105 text-white text-center overflow-hidden p-6">
+        <div
+          class="absolute inset-0 z-0 transition-colors duration-300 group-hover:bg-yellow-400 bg-yellow-600 border-4 border-yellow-600 rounded-3xl">
+        </div>
+        <span class="z-10 block transition-opacity duration-300 opacity-100 group-hover:opacity-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-24 h-24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+          </svg>
+        </span>
+        <span
+          class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl font-semibold transition-all duration-300 delay-100 opacity-0 group-hover:opacity-100 group-hover:-translate-y-28">
+          Teacher
+        </span>
+        <span
+          class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block text-2xl transition-opacity duration-300 delay-100 opacity-0 group-hover:opacity-100 mt-8">
+          Teacher Resources
+        </span>
+      </a>
     </div>
-  </body>
+  </div>
+
+  <script>
+    const robotFaceContainer = document.getElementById('robot-face-container');
+    const body = document.body;
+
+    robotFaceContainer.addEventListener('click', () => {
+      robotFaceContainer.style.display = 'none';
+    });
+
+    // Add keybind for force redirect
+    document.addEventListener('keydown', function(event) {
+      // Check if Ctrl + Shift + R is pressed (you can change this combination)
+      if (event.ctrlKey && event.shiftKey && event.key === 'R') {
+        // Redirect to the index page
+        window.location.href = './index.html';
+      }
+    });
+  </script>
+</body>
 </html>
